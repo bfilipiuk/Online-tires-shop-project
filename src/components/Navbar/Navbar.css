@@ -1,6 +1,4 @@
-.active {
-    background-color: blue;
-}
+
 
 nav {
     display: flex;
@@ -41,5 +39,9 @@ nav ul li a {
 }
 
 nav ul li a:hover {
+    background-color: #0540a2;
+}
+
+nav ul li a.active {
     background-color: #0540a2;
 }

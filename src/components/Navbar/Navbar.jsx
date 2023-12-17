@@ -1,5 +1,8 @@
 import React from "react";
+import { useState } from "react";
+import { AnimationWrapper } from "react-hover-animation"
 import {Link} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/oponylogo.svg";
 
@@ -10,15 +13,23 @@ const Navbar = () => {
                 <img src={logo} alt="Logo" height="35" />
             </Link>
             <ul>
+                <AnimationWrapper>
                 <li>
-                    <Link>O nas</Link>
+                    <NavLink to="/about">O nas</NavLink>
                 </li>
+                </AnimationWrapper>
+
+                <AnimationWrapper>
                 <li>
-                    <Link>Kontakt</Link>
+                    <NavLink to="/contact">Kontakt</NavLink>
                 </li>
+                </AnimationWrapper>
+
+                <AnimationWrapper>
                 <li>
-                    <Link>Zaloguj się</Link>
+                    <NavLink to="/login">Zaloguj się</NavLink>
                 </li>
+                </AnimationWrapper>
             </ul>
         </nav>
     )
