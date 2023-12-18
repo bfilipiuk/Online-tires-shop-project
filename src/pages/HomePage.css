@@ -14,21 +14,35 @@ Header, .sprawdz-oferte, .flex-container-1, .flex-container-2 {
     animation: fadeIn 2s;
 }
 
+.text-oferta {
+    color: black;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
 .sprawdz-oferte {
     position: relative;
+    justify-content: center;
+
     background-image: url('../assets/slady.png');
     background-size: cover;
     background-position: center;
+    background-position-y: 60%;
+
     color: white;
     text-align: center;
-    padding: 300px 0;
+    padding-top: 100px;
+    padding-bottom: 80px;
     overflow: hidden;
 }
-
 .sprawdz-oferte .button-oferta {
     position: relative;
     font-family: "Poppins";
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
     text-transform: none;
     background-color: #0540F2;

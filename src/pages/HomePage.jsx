@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
+import { AnimationWrapper } from "react-hover-animation"
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
@@ -21,7 +22,13 @@ const HomePage = () => {
             <Header/>
 
             <div className="sprawdz-oferte">
-                <Button onClick={handleButtonClickOferta} className="button-oferta" variant="contained">Sprawdź oferte</Button>
+                <p className="text-oferta">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+                <AnimationWrapper>
+                    <Button onClick={handleButtonClickOferta} className="button-oferta" variant="contained">Sprawdź oferte</Button>
+                </AnimationWrapper>
             </div>
         
             <div className="flex-container-1">
