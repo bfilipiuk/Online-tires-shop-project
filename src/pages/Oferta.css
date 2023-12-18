@@ -1,0 +1,69 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.flex-container-1-o {
+    animation:  fadeIn 2s;
+}
+
+.flex-container-1-o {
+    display: flex;
+    align-items: flex-start;
+}
+
+.left-1-o {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px;
+    width: 60%;
+}
+
+.img-container-o {
+    flex: 1;
+
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+    max-height: 100%;
+    padding: 10px;
+
+}
+
+.left-1-o, .img-container-o {
+    margin: 1px;
+}
+
+.img-container-o img {
+    height: 50rem;
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+}
+
+.nasza-oferta-h {
+    font-size: 3.5rem;
+    font-weight:800;
+    margin-left: 15rem;
+    margin-top: 10rem;
+
+    color: #0540F2;
+
+    text-align: left;
+}
+
+.text-o {
+    margin-left: 15rem;
+    margin-top: 0rem;
+    font-size: 2rem;
+    font-weight: 600;
+
+    text-align: left;
+    width: 70%;
+}
