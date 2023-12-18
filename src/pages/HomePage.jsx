@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/Header/Header";
-import Footer from "../components/Footer";
+import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import img_bmw from "../assets/bmw.png"
 import "./HomePage.css"
@@ -39,6 +39,10 @@ const HomePage = () => {
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     </div>
                 </div>
+            </div>
+
+            <div className="white-box">
+                
             </div>
 
             <Footer />
