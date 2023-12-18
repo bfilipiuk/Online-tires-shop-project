@@ -14,7 +14,7 @@ const Contact = () => {
             <p className="p">kontakt@twojeopony.pl</p>
             <p className="p">+48 881 124 623</p>
 
-            <div className="white-box" />
+            <div className="white-box-c" />
             <Footer/>
         </div>
     )

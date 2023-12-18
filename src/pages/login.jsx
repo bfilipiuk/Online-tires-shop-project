@@ -37,7 +37,7 @@ const Login = () => {
     return (
         <div>
             <Navbar/>
-            <div>
+            <div className="main">
                 <ThemeProvider theme={defaultTheme}>
                 <Grid container component="main" sx={{ height: '100vh' }}>
                 <CssBaseline />

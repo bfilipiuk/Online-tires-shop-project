@@ -19,6 +19,8 @@ const HomePage = () => {
     return (
         <div>
             <Navbar />
+
+            <div className="main">
             <Header/>
 
             <div className="sprawdz-oferte">
@@ -64,7 +66,7 @@ const HomePage = () => {
             <div className="white-box">
                 
             </div>
-
+            </div>
             <Footer />
         </div>
     );
