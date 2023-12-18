@@ -14,6 +14,12 @@ const Navbar = () => {
             <ul>
                 <AnimationWrapper>
                 <li>
+                    <NavLink to="/oferta">Oferta</NavLink>
+                </li>
+                </AnimationWrapper>
+
+                <AnimationWrapper>
+                <li>
                     <NavLink to="/about">O nas</NavLink>
                 </li>
                 </AnimationWrapper>

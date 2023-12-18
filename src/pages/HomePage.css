@@ -1,4 +1,39 @@
 
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+    
+}
+
+Header, .sprawdz-oferte, .flex-container-1, .flex-container-2 {
+    animation: fadeIn 2s;
+}
+
+.sprawdz-oferte {
+    position: relative;
+    background-image: url('../assets/slady.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 300px 0;
+    overflow: hidden;
+}
+
+.sprawdz-oferte .button-oferta {
+    position: relative;
+    font-family: "Poppins";
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: none;
+    background-color: #0540F2;
+}
+
 .flex-container-1, .flex-container-2 {
     display: flex;
 }

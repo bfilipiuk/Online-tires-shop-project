@@ -1,15 +1,21 @@
 import React from "react";
+import Button from "@mui/material/Button";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import img_bmw from "../assets/bmw.png"
 import "./HomePage.css"
 
+
 const HomePage = () => {
     return (
         <div>
             <Navbar />
-            <Header />
+            <Header/>
+
+            <div className="sprawdz-oferte">
+                <Button href="/oferta" className="button-oferta" variant="contained">Sprawdź oferte</Button>
+            </div>
         
             <div className="flex-container-1">
                 <div className="left-1">
