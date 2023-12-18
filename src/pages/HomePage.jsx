@@ -26,7 +26,21 @@ const HomePage = () => {
                 </div>
             </div>
 
-            
+            <div className="flex-container-2">
+                <div className="img-container-2">
+                    <img src = {img_bmw} alt="bmw img" />
+                </div>
+
+                <div className="left-2">
+                    <h1 className="kim-jestesmy-h">Kim jesteśmy?</h1>
+
+                    <div className="text-container-2">
+                        <p className="text-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                </div>
+            </div>
+
             <Footer />
         </div>
     );
