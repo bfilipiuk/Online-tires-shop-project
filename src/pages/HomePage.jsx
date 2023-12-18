@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
@@ -8,13 +9,19 @@ import "./HomePage.css"
 
 
 const HomePage = () => {
+    const navigate = useNavigate();
+
+    const handleButtonClickOferta = () => {
+        navigate('oferta');
+    };
+
     return (
         <div>
             <Navbar />
             <Header/>
 
             <div className="sprawdz-oferte">
-                <Button href="/oferta" className="button-oferta" variant="contained">Sprawdź oferte</Button>
+                <Button onClick={handleButtonClickOferta} className="button-oferta" variant="contained">Sprawdź oferte</Button>
             </div>
         
             <div className="flex-container-1">
