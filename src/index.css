@@ -21,7 +21,7 @@ code {
     monospace;
 }
 
-header, footer, section, article, div {
+header, footer, section, article, div, button {
   margin: 0;
   padding: 0;
 }

@@ -40,7 +40,7 @@ const HomePage = () => {
                             quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <AnimationWrapper>
-                    <Button onClick={handleButtonClickOferta} className="button-oferta" variant="contained">Sprawdź oferte</Button>
+                    <Button onClick={handleButtonClickOferta} style={{ fontFamily: 'Poppins, sans-serif' }} className="button-oferta" variant="contained">Sprawdź oferte</Button>
                 </AnimationWrapper>
             </div>
         
