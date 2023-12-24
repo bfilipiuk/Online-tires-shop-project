@@ -1,20 +1,31 @@
 import React from "react";
+import { useState, useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import { AnimationWrapper } from "react-hover-animation"
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
+import Loader from "../components/Loader/Loader";
 import img_bmw from "../assets/bmw.png"
 import "./HomePage.css"
 
 
 const HomePage = () => {
     const navigate = useNavigate();
-
     const handleButtonClickOferta = () => {
         navigate('oferta');
     };
+
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => setLoading(false), 1000);
+      }, []);
+    
+      if (loading) {
+        return Loader;
+      }
 
     return (
         <div>
