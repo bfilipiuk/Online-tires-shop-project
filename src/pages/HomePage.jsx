@@ -24,7 +24,7 @@ const HomePage = () => {
       }, []);
     
       if (loading) {
-        return Loader;
+        return <Loader />;
       }
 
     return (

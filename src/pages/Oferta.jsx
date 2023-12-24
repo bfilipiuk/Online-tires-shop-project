@@ -25,6 +25,11 @@ const Oferta = () => {
                         <img src = {img} alt="opony img" />
                     </div>
                 </div>
+                    {/* tu Kacper masz kontener na tabele :)
+                    link do fajnych tabelek => https://mui.com/material-ui/react-table/ */}
+                <div className="table-container">
+                
+                </div>
             </div>
             <Footer/>
         </div>
