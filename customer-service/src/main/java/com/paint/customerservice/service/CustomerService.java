@@ -26,7 +26,7 @@ public class CustomerService {
         return customerRepository.findActiveCustomerById(customerId);
     }
 
-    public Customer updateCustomer(Integer customerId, Customer updatedCustomer){
+    public Customer updateCustomer(Long customerId, Customer updatedCustomer){
         return customerRepository.updateCustomer(customerId, updatedCustomer);
     }
 }
