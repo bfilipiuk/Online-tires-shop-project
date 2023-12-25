@@ -24,4 +24,14 @@ public class CustomerRepositoryImpl implements CustomerRepositoryCustom {
         return query.getResultList();
     }
 
+    @Override
+    public Customer findActiveCustomerById(Long id){
+        TypedQuery<Customer> query = entityManager.createQuery(
+                "SELECT c FROM Customer c WHERE c.active= true AND c.status = true and c.id = :id",
+                Customer.class
+        );
+        query.setParameter("id", id);
+        return query.getSingleResult();
+    }
+
 }

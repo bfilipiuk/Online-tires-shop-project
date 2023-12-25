@@ -23,12 +23,26 @@ public class CustomerRepositoryTest {
     CustomerRepository customerRepository;
 
     @Test
-    public void givenCustomerId_whenF() {
+    public void findAllActiveCustomers() {
         List<Customer> result = customerRepository.findActiveCustomer();
         assertThat(result).singleElement().satisfies(dto -> {
             assertThat(dto.getId()).isEqualTo(1L);
             assertThat(dto.getFirstName()).isEqualTo("John");
             assertThat(dto.getSecondName()).isEqualTo("Doe");
         });
+    }
+
+    @Test
+    public void givenCustomerId_whenFindActiveCustomerById_thenExpected() {
+        //given
+        Long customerId = 1L;
+
+        //when
+        Customer result = customerRepository.findActiveCustomerById(customerId);
+
+        //then
+        assertThat(result.getId()).isEqualTo(1L);
+        assertThat(result.getFirstName()).isEqualTo("John");
+        assertThat(result.getSecondName()).isEqualTo("Doe");
     }
 }

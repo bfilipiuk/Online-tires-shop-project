@@ -18,4 +18,8 @@ public class CustomerService {
         return customerRepository.findActiveCustomer();
     }
 
+    public Customer findActiveCustomerById(Long customerId){
+        return customerRepository.findActiveCustomerById(customerId);
+    }
+
 }
