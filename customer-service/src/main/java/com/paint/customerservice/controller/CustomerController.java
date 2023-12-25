@@ -7,17 +7,18 @@ import com.paint.customerservice.model.Customer;
 import com.paint.customerservice.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/customer")
 public class CustomerController {
 
+    private final CustomerService customerService;
+
     @Autowired
-    CustomerService customerService;
+    public CustomerController(CustomerService customerService){
+        this.customerService = customerService;
+    }
 
     @GetMapping
     public ResponseEntity<List<Customer>> getAllActiveCustomers(){
@@ -26,7 +27,15 @@ public class CustomerController {
     }
 
     @GetMapping("/{id}")
-    public Customer getActiveCustomer(@PathVariable Long customerId){
-        return customerService.findActiveCustomerById(customerId);
+    public ResponseEntity<Customer> getActiveCustomer(@PathVariable Long customerId){
+        Customer response = customerService.findActiveCustomerById(customerId);
+        return ResponseEntity.ok(response);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Customer> updateCustomer(@PathVariable Long customerId, @RequestBody Customer updatedCustomer){
+        Customer response = customerService.updateCustomer(customerId, updatedCustomer);
+        return ResponseEntity.ok(response);
+    }
+
 }

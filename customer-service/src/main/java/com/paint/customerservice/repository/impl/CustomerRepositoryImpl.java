@@ -1,13 +1,14 @@
 package com.paint.customerservice.repository.impl;
 
-
 import java.util.List;
 
-import com.paint.customerservice.model.Customer;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.TypedQuery;
+
 import org.springframework.stereotype.Repository;
+
+import com.paint.customerservice.model.Customer;
 
 @Repository
 public class CustomerRepositoryImpl implements CustomerRepositoryCustom {
@@ -34,4 +35,16 @@ public class CustomerRepositoryImpl implements CustomerRepositoryCustom {
         return query.getSingleResult();
     }
 
+    @Override
+    public Customer updateCustomer(Long customerId, Customer updatedCustomer){
+       try {
+           Customer customer = entityManager.find(Customer.class, customerId);
+           customer.setFirstName(updatedCustomer.getFirstName());
+           customer.setSecondName(updatedCustomer.getSecondName());
+           customer.setEmail(updatedCustomer.getEmail());
+           return customer;
+       } catch (RuntimeException exception){
+        throw new RuntimeException("Customer not found with id " + customerId);
+       }
+    }
 }
