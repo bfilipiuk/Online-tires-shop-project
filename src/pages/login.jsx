@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import Navbar from "../components/Navbar/Navbar";
 import Avatar from '@mui/material/Avatar';
@@ -25,14 +24,51 @@ const defaultTheme = createTheme({
 });
 
 const Login = () => {
-    const handleSubmit = (event) => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const handleSubmit = async (event) => {
+        // event.preventDefault();
+        // const data = new FormData(event.currentTarget);
+        // console.log({
+        //     email: data.get('email'),
+        //     password: data.get('password'),
+        // });
+
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
-      };
+
+        // Tutaj możesz dodać logikę wysyłania żądania do backendu
+        // Na przykład za pomocą fetch lub axios
+        try {
+            const response = await fetch('URL_API', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email, password }),
+            });
+
+            const data = await response.json();
+
+            // Tutaj możesz obsłużyć odpowiedź, np. przekierować użytkownika
+            // lub wyświetlić błąd logowania
+        } catch (error) {
+            console.error('Błąd logowania:', error);
+            // Obsługa błędów
+        }
+    }
+
+    //     const { login, password } = event.target.elemenets;
+
+    //     if (login.value === 'user' && password.value === 'user') {
+    //         setUser({ type: 'user' });
+    //     }
+    //     else if (login.value === 'admin' && password.value === 'admin') {
+    //         setUser({ type: 'admin' });
+    //     } else {
+    //         alert('Nieprawidłowe dane logowania');
+    //   }
+    //   };
 
     return (
         <div>
@@ -81,6 +117,8 @@ const Login = () => {
                         name="email"
                         autoComplete="email"
                         autoFocus
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
                     />
                     <TextField
                         margin="normal"
@@ -91,6 +129,8 @@ const Login = () => {
                         type="password"
                         id="password"
                         autoComplete="current-password"
+                        value={password}
+                        onChange={e => setPassword(e.target.value)}
                     />
                     <FormControlLabel
                         control={<Checkbox value="remember" color="primary" />}

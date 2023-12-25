@@ -11,6 +11,7 @@ import ManageStock from './pages/managestock'
 // }
 
 const App = () => {
+
   return (
     <Router>
       <Routes>
