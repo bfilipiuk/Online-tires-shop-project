@@ -9,6 +9,7 @@ import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit.jupiter.SpringJUnitConfig;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -26,7 +27,7 @@ public class CustomerRepositoryTest {
     public void findAllActiveCustomers() {
         List<Customer> result = customerRepository.findActiveCustomer();
         assertThat(result).singleElement().satisfies(dto -> {
-            assertThat(dto.getId()).isEqualTo(1L);
+            assertThat(dto.getId()).isEqualTo(1);
             assertThat(dto.getFirstName()).isEqualTo("John");
             assertThat(dto.getSecondName()).isEqualTo("Doe");
         });

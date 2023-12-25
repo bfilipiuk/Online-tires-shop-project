@@ -1,5 +1,6 @@
 package com.paint.customerservice.repository.impl;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import jakarta.persistence.EntityManager;
@@ -36,7 +37,7 @@ public class CustomerRepositoryImpl implements CustomerRepositoryCustom {
     }
 
     @Override
-    public Customer updateCustomer(Long customerId, Customer updatedCustomer){
+    public Customer updateCustomer(Integer customerId, Customer updatedCustomer){
        try {
            Customer customer = entityManager.find(Customer.class, customerId);
            customer.setFirstName(updatedCustomer.getFirstName());

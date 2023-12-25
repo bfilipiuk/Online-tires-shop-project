@@ -1,5 +1,6 @@
 package com.paint.customerservice.controller;
 
+import java.math.BigInteger;
 import java.util.List;
 
 
@@ -26,14 +27,14 @@ public class CustomerController {
         return ResponseEntity.ok(response);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{customerId}")
     public ResponseEntity<Customer> getActiveCustomer(@PathVariable Long customerId){
         Customer response = customerService.findActiveCustomerById(customerId);
         return ResponseEntity.ok(response);
     }
 
-    @PutMapping("/{id}")
-    public ResponseEntity<Customer> updateCustomer(@PathVariable Long customerId, @RequestBody Customer updatedCustomer){
+    @PutMapping("/{customerId}")
+    public ResponseEntity<Customer> updateCustomer(@PathVariable Integer customerId, @RequestBody Customer updatedCustomer){
         Customer response = customerService.updateCustomer(customerId, updatedCustomer);
         return ResponseEntity.ok(response);
     }

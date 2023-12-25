@@ -1,5 +1,6 @@
 package com.paint.customerservice.service;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import com.paint.customerservice.model.Customer;
@@ -25,7 +26,7 @@ public class CustomerService {
         return customerRepository.findActiveCustomerById(customerId);
     }
 
-    public Customer updateCustomer(Long customerId, Customer updatedCustomer){
+    public Customer updateCustomer(Integer customerId, Customer updatedCustomer){
         return customerRepository.updateCustomer(customerId, updatedCustomer);
     }
 }
